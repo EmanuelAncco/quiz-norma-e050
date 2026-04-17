@@ -479,15 +479,15 @@
 <body>
 <div class="container">
   <header>
-    <h1>Cuestionario Norma E.050</h1>
-    <p>Suelos y Cimentaciones — Reglamento Nacional de Edificaciones (Perú)</p>
+    <h1>Cuestionario Norma E.050 — Cap. I</h1>
+    <p>Disposiciones Generales · Suelos y Cimentaciones (RNE, Perú)</p>
   </header>
 
   <!-- INTRO -->
   <div id="intro" class="card intro">
     <h2 style="margin-top:0">Reglas del juego</h2>
     <ul>
-      <li><strong>60 preguntas</strong> en el banco total.</li>
+      <li><strong>60 preguntas</strong> exclusivamente del <strong>Capítulo I — Disposiciones Generales</strong> (Arts. 1-12).</li>
       <li>Cada intento presenta <strong>20 preguntas aleatorias</strong>.</li>
       <li>Puedes pedir hasta <strong>3 pistas</strong> en todo el intento.</li>
       <li>Recibirás <strong>retroalimentación</strong> explicativa en cada respuesta (correcta o incorrecta).</li>
@@ -538,611 +538,428 @@
 
 <script>
 /* ============================================================
-   BANCO DE 60 PREGUNTAS — NORMA E.050 SUELOS Y CIMENTACIONES
+   BANCO DE 60 PREGUNTAS — NORMA E.050, CAPÍTULO I (Arts. 1-12)
    ============================================================ */
 const QUESTIONS = [
   {
     q: "¿Cuál es el objeto principal de la Norma E.050?",
-    options: [
-      "Normar el diseño sísmico de estructuras de concreto armado",
-      "Establecer los requisitos mínimos para la ejecución de Estudios de Mecánica de Suelos (EMS) con fines de cimentación",
-      "Regular únicamente la construcción de muros de contención",
-      "Definir los procedimientos de pavimentación urbana"
-    ],
+    options: ["Normar el diseño sísmico de estructuras de concreto", "Establecer los requisitos mínimos para la ejecución de Estudios de Mecánica de Suelos (EMS) con fines de cimentación de edificaciones", "Regular la construcción de pavimentos urbanos", "Definir procedimientos de excavación minera"],
     correct: 1,
-    hint: "Revisa el Artículo 1: habla de EMS y cimentaciones de edificaciones.",
-    feedback: "La Norma E.050 establece requisitos mínimos para ejecutar Estudios de Mecánica de Suelos (EMS) con fines de cimentación de edificaciones, asegurando estabilidad y permanencia de las obras."
+    hint: "Art. 1: EMS con fines de cimentación.",
+    feedback: "Art. 1: establecer los requisitos mínimos para la ejecución de EMS con fines de cimentación de edificaciones y otras obras indicadas, para asegurar estabilidad y permanencia y promover uso racional de recursos."
   },
   {
-    q: "Según la E.050, la cimentación se considera SUPERFICIAL cuando:",
-    options: [
-      "La relación Df/B es mayor a 5",
-      "La relación Df/B es menor o igual a 5",
-      "La profundidad es menor a 1 m",
-      "El ancho es mayor a la profundidad"
-    ],
+    q: "Entre las finalidades de la Norma E.050 está:",
+    options: ["Maximizar los costos de los estudios", "Asegurar la continuidad de los servicios básicos y edificaciones esenciales según la E.030, y minimizar daños al proyecto y a estructuras o vías colindantes", "Reemplazar la Norma E.030", "Regular únicamente obras públicas"],
     correct: 1,
-    hint: "Df/B es el criterio; busca el valor límite en las definiciones.",
-    feedback: "Cimentación Superficial: Df/B ≤ 5, donde Df es la profundidad de cimentación y B el ancho o diámetro (numeral 5.26 y Art. 23)."
+    hint: "Art. 2: continuidad de servicios + minimizar daños.",
+    feedback: "Art. 2.1-2.2: asegurar la continuidad de servicios básicos y edificaciones esenciales según la E.030, y minimizar daños al proyecto y estructuras/vías colindantes."
   },
   {
-    q: "Una cimentación se considera PROFUNDA por PILOTES cuando la relación d/b es:",
-    options: [
-      "Mayor o igual a 3",
-      "Mayor o igual a 5",
-      "Mayor o igual a 10",
-      "Mayor o igual a 15"
-    ],
+    q: "El ámbito de aplicación de la Norma E.050 comprende:",
+    options: ["Solo Lima Metropolitana", "Solo la zona costera del Perú", "Todo el territorio nacional, en concordancia con la Norma G.010 del RNE", "Solo ciudades de más de 500 000 habitantes"],
+    correct: 2,
+    hint: "Art. 3: territorio nacional + Norma G.010.",
+    feedback: "Art. 3: el ámbito comprende todo el territorio nacional, en concordancia con lo establecido en la Norma G.010 del RNE."
+  },
+  {
+    q: "Las exigencias de la Norma E.050 se consideran:",
+    options: ["Máximas", "Mínimas", "Referenciales y no obligatorias", "Opcionales para obras privadas"],
+    correct: 1,
+    hint: "Art. 4.3.",
+    feedback: "Art. 4.3: las exigencias de la Norma E.050 se consideran mínimas."
+  },
+  {
+    q: "Respecto a fenómenos de geodinámica externa y ruinas arqueológicas o galerías subterráneas, la Norma:",
+    options: ["Los cubre plenamente", "No toma en cuenta los efectos de geodinámica externa y no se aplica cuando haya evidencia de ruinas arqueológicas o galerías; requiere estudios de un profesional competente distinto al PR", "Obliga al PR a resolver estos problemas directamente", "Ignora por completo estas situaciones"],
+    correct: 1,
+    hint: "Art. 4.4: estudios específicos por un profesional distinto al PR.",
+    feedback: "Art. 4.4: la Norma no toma en cuenta los efectos de geodinámica externa ni se aplica cuando existan ruinas arqueológicas o galerías subterráneas; se requieren estudios específicos por un profesional competente (arqueólogo o geólogo) distinto al PR."
+  },
+  {
+    q: "En el caso de cimentaciones, la E.050 exige que las deformaciones del suelo o roca generen:",
+    options: ["Distorsión angular mayor a la permitida y presiones mayores que las admisibles", "Distorsión angular menor que la permitida y presiones menores que las admisibles (con FS correspondiente)", "Solo presiones menores, sin considerar distorsión angular", "Presiones iguales a la capacidad de carga"],
+    correct: 1,
+    hint: "Art. 4.1.",
+    feedback: "Art. 4.1: las deformaciones deben causar una distorsión angular menor que la permitida y producir presiones menores que las admisibles, considerando el estado límite del suelo y el FS correspondiente."
+  },
+  {
+    q: "Un ANCLAJE, según la definición 5.1, es:",
+    options: ["Una cimentación superficial", "Un elemento estructural instalado en suelo o roca que se utiliza para transmitir al terreno una carga de tracción aplicada", "Un pilote de gran diámetro", "Una losa armada en dos direcciones"],
+    correct: 1,
+    hint: "Transmite TRACCIÓN al terreno.",
+    feedback: "Def. 5.1: anclaje es un elemento estructural instalado en suelo o roca que se utiliza para transmitir al terreno una carga de tracción aplicada."
+  },
+  {
+    q: "Un ANCLAJE ACTIVO se caracteriza porque:",
+    options: ["Se instala y NO se tensa posteriormente", "Se instala y se tensa posteriormente a su instalación, introduciendo una fuerza adicional al suelo o estructura en magnitud y dirección determinada por el PRS", "Es siempre provisional", "Solo se utiliza en roca sana"],
+    correct: 1,
+    hint: "Tensado posterior = activo.",
+    feedback: "Def. 5.2: anclaje activo = instalado y tensado posteriormente, introduciendo una fuerza adicional al suelo o estructura en magnitud y dirección determinada por el PRS."
+  },
+  {
+    q: "El ASENTAMIENTO DIFERENCIAL se define como:",
+    options: ["El asentamiento promedio de toda la estructura", "Máxima diferencia de nivel entre dos cimentaciones adyacentes unidas por un elemento estructural que pertenecen a la misma estructura", "El asentamiento máximo admisible", "El asentamiento del centro de la zapata"],
+    correct: 1,
+    hint: "Diferencia entre cimentaciones adyacentes.",
+    feedback: "Def. 5.3: máxima diferencia de nivel entre dos cimentaciones adyacentes unidas por un elemento estructural que pertenecen a la misma estructura."
+  },
+  {
+    q: "El ASENTAMIENTO DIFERENCIAL TOLERABLE es:",
+    options: ["Cualquier asentamiento diferencial inferior a 2 cm", "Máximo asentamiento diferencial entre dos elementos adyacentes unidos por un elemento estructural que al ocurrir no produce daños visibles ni causa problemas", "El asentamiento total dividido entre dos", "Solo el asentamiento inicial de la edificación"],
+    correct: 1,
+    hint: "Sin daños visibles ni problemas.",
+    feedback: "Def. 5.4: máximo asentamiento diferencial entre dos elementos adyacentes unidos por un elemento estructural, que al ocurrir no produce daños visibles ni causa problemas."
+  },
+  {
+    q: "El BULBO (def. 5.5) es:",
+    options: ["Un elemento superficial de concreto", "Un elemento estructural de acero fijado al suelo o roca mediante un material cementante, que recibe la carga del cabezal a través del tramo libre", "La cabeza visible del anclaje", "Un tipo de pilote de fricción"],
+    correct: 1,
+    hint: "Fijado con material cementante, recibe la carga del cabezal.",
+    feedback: "Def. 5.5: bulbo = elemento estructural de acero fijado al suelo o roca mediante un material cementante; recibe la carga del cabezal a través del tramo libre y la transmite al suelo circundante."
+  },
+  {
+    q: "El BULBO DE PRESIONES corresponde a la zona bajo la cimentación delimitada por la isóbara igual al:",
+    options: ["5% de la presión de contacto", "10% de la presión de contacto", "25% de la presión de contacto", "50% de la presión de contacto"],
+    correct: 1,
+    hint: "Un dígito — la misma que la profundidad activa.",
+    feedback: "Def. 5.6: el bulbo de presiones (o de esfuerzos) está delimitado por la isóbara igual al 10% de la presión de contacto."
+  },
+  {
+    q: "El CABEZAL del anclaje es:",
+    options: ["El extremo inferior del bulbo", "El elemento de fijación mecánica de la carga aplicada a través del tendón a la pantalla o muro estructural, que transmite la carga al bulbo", "Un tipo de pilote de punta", "La cubierta de protección de la obra"],
+    correct: 1,
+    hint: "Fija la carga a la pantalla/muro.",
+    feedback: "Def. 5.7: cabezal = elemento de fijación mecánica de la carga aplicada a través del tendón a la pantalla o muro estructural, que transmite la carga al bulbo del anclaje."
+  },
+  {
+    q: "Un CAJÓN (caisson) se define como:",
+    options: ["Zapata corrida de concreto", "Elemento prefabricado de cimentación construido inicialmente hueco, que puede ser rellenado después de colocado en su posición final", "Un tipo de anclaje activo", "Un pilote corto hincado"],
+    correct: 1,
+    hint: "Prefabricado y hueco.",
+    feedback: "Def. 5.8: cajón (caisson) = elemento prefabricado de cimentación que se construye inicialmente hueco, pudiendo ser rellenado después de colocado en su posición final."
+  },
+  {
+    q: "La CAPACIDAD DE CARGA (def. 5.9) es:",
+    options: ["La presión admisible ya incluido el FS", "La presión requerida para producir la falla del suelo por corte que sirve de apoyo a la cimentación (sin factor de seguridad)", "La carga muerta de la estructura", "El peso de la cimentación"],
+    correct: 1,
+    hint: "Es la presión de FALLA, sin FS.",
+    feedback: "Def. 5.9: capacidad de carga = presión requerida para producir la falla del suelo por corte que sirve de apoyo a la cimentación, sin factor de seguridad."
+  },
+  {
+    q: "Según las definiciones 5.10 y 5.12, CARGA ADMISIBLE y CARGA DE TRABAJO son:",
+    options: ["Conceptos diferentes", "Sinónimos de Presión Admisible", "Sinónimos de Capacidad de Carga", "Iguales al peso propio de la cimentación"],
+    correct: 1,
+    hint: "Ambas son sinónimos.",
+    feedback: "Defs. 5.10 y 5.12: tanto Carga Admisible como Carga de Trabajo son sinónimos de Presión Admisible (ver también 5.50)."
+  },
+  {
+    q: "La CARGA DE SERVICIO, para efectos de la E.050, es:",
+    options: ["Carga última mayorada", "Carga viva más carga muerta más cargas inducidas por sismo, SIN factores de amplificación", "Solo la carga muerta de la estructura", "La carga de viento más sismo mayoradas"],
+    correct: 1,
+    hint: "CV + CM + sismo, sin factores.",
+    feedback: "Def. 5.11: carga de servicio = carga viva + carga muerta + cargas inducidas por sismos, sin factores de amplificación."
+  },
+  {
+    q: "Las definiciones 5.13 (Carga Muerta) y 5.14 (Carga Viva) remiten a la Norma:",
+    options: ["E.030", "E.020 Cargas", "E.060 Concreto Armado", "E.070 Albañilería"],
+    correct: 1,
+    hint: "La Norma de Cargas.",
+    feedback: "Defs. 5.13 y 5.14: carga muerta y carga viva se definen de acuerdo con la NTE E.020 Cargas. La carga inducida por sismo (5.15) remite a la E.030."
+  },
+  {
+    q: "La CIMENTACIÓN (def. 5.16) se define como:",
+    options: ["Elemento que transmite al suelo las cargas de la estructura", "Elemento que absorbe las cargas verticales y las convierte en tracciones", "Capa granular sobre la que se apoya el piso", "Sistema de anclajes perimetrales"],
+    correct: 0,
+    hint: "Transmite cargas al suelo.",
+    feedback: "Def. 5.16: cimentación = elemento que transmite al suelo las cargas de la estructura."
+  },
+  {
+    q: "Una CIMENTACIÓN CONTINUA (cimiento corrido) es aquella cimentación superficial en la que:",
+    options: ["L = B (largo = ancho)", "L ≤ 10·B", "L > 10·B (largo mayor que diez veces el ancho)", "El diámetro iguala al ancho"],
+    correct: 2,
+    hint: "Muy larga respecto al ancho.",
+    feedback: "Def. 5.17: cimentación continua = superficial con L > 10·B (largo mayor que diez veces el ancho)."
+  },
+  {
+    q: "Una CIMENTACIÓN CUADRADA se caracteriza porque:",
+    options: ["L = B (largo igual al ancho)", "L = 2·B", "L ≤ 10·B", "El diámetro D = B"],
+    correct: 0,
+    hint: "Definición 5.18: muy corta.",
+    feedback: "Def. 5.18: cimentación cuadrada = superficial con L = B (largo igual al ancho)."
+  },
+  {
+    q: "Una CIMENTACIÓN RECTANGULAR (def. 5.19) es aquella superficial en la que:",
+    options: ["L = B", "L > 10·B", "L ≤ 10·B (largo igual o menor que diez veces el ancho)", "El ancho es igual al diámetro"],
+    correct: 2,
+    hint: "Ni cuadrada ni continua.",
+    feedback: "Def. 5.19: cimentación rectangular = superficial con L ≤ 10·B (largo igual o menor que diez veces el ancho)."
+  },
+  {
+    q: "Una CIMENTACIÓN ANULAR CONTINUA (def. 5.21) es aquella superficial en la que:",
+    options: ["El diámetro D ≥ 10 m", "El perímetro medio P es mayor o igual a diez veces el ancho B (P ≥ 10·B)", "L = B (cuadrada)", "El largo L ≤ 10·B"],
+    correct: 1,
+    hint: "Forma de anillo — el perímetro medio manda.",
+    feedback: "Def. 5.21: cimentación anular continua = superficial en la que el perímetro medio P ≥ 10·B."
+  },
+  {
+    q: "La CIMENTACIÓN POR PILARES se define como profunda con relación Df/B:",
+    options: ["Mayor o igual a 2", "Mayor o igual a 5 (el pilar es excavado y vaciado in situ)", "Mayor o igual a 10", "Menor o igual a 5"],
+    correct: 1,
+    hint: "Df/B ≥ 5 — el mismo umbral que superficial/profunda pero para pilares.",
+    feedback: "Def. 5.22: cimentación por pilares = profunda con Df/B ≥ 5, siendo Df la profundidad enterrada y B el ancho enterrada del pilar. El pilar es excavado y vaciado in situ."
+  },
+  {
+    q: "La CIMENTACIÓN POR PILOTES se define como profunda con relación d/b:",
+    options: ["Mayor o igual a 3", "Mayor o igual a 5", "Mayor o igual a 10", "Menor o igual a 5"],
     correct: 2,
     hint: "Para pilotes el criterio es más exigente que para pilares.",
-    feedback: "Por pilotes se requiere d/b ≥ 10. Para pilares la relación Df/B ≥ 5 (definiciones 5.22 y 5.23)."
+    feedback: "Def. 5.23: cimentación por pilotes = profunda con d/b ≥ 10, siendo d la longitud enterrada del pilote y b el ancho o diámetro del pilote."
   },
   {
-    q: "¿Cuál es el factor de seguridad mínimo frente a falla por corte para CARGAS ESTÁTICAS en cimentaciones?",
-    options: ["1,5", "2,0", "2,5", "3,0"],
-    correct: 3,
-    hint: "Artículo 21: estático vs. sísmico.",
-    feedback: "FS ≥ 3,0 para cargas estáticas y ≥ 2,5 para solicitación máxima de sismo o viento (Art. 21)."
+    q: "Una CIMENTACIÓN POR PLATEA O LOSA DE CIMENTACIÓN se define como:",
+    options: ["Cimentación superficial de zapatas aisladas", "Cimentación constituida por una losa rígida sobre la cual se apoyan varias columnas o placas", "Cimentación profunda por pilotes cortos", "Una variante de anclaje activo"],
+    correct: 1,
+    hint: "Losa rígida que recibe varias columnas.",
+    feedback: "Def. 5.24: cimentación por platea o losa = constituida por una losa rígida sobre la cual se apoyan varias columnas o placas."
   },
   {
-    q: "¿Cuál es el factor de seguridad mínimo frente a falla por corte para SISMO o VIENTO?",
-    options: ["1,25", "1,5", "2,5", "3,0"],
+    q: "Una CIMENTACIÓN PROFUNDA (def. 5.25) es:",
+    options: ["Cualquiera con Df > 1 m", "Aquella que transmite cargas a capas del suelo mediante pilotes, pilares u otros elementos que transmiten cargas no comprendidas en 5.26", "Solo la que usa cajones de cimentación", "Aquella que se apoya sobre roca"],
+    correct: 1,
+    hint: "Transmite por pilotes, pilares u otros.",
+    feedback: "Def. 5.25: cimentación profunda = transmite cargas a capas del suelo mediante pilotes, pilares u otros elementos, distintos a los comprendidos en 5.26 (superficial)."
+  },
+  {
+    q: "Una CIMENTACIÓN SUPERFICIAL se define como aquella en la que:",
+    options: ["Df/B > 5", "Df/B ≤ 5 (siendo Df la profundidad y B el ancho o diámetro)", "Df > 5 m", "El diámetro B > 10 m"],
+    correct: 1,
+    hint: "Relación Df/B menor o igual a 5.",
+    feedback: "Def. 5.26: cimentación superficial = aquella con Df/B ≤ 5, siendo Df la profundidad de la cimentación y B el ancho o diámetro de la misma."
+  },
+  {
+    q: "El ESTUDIO DE MECÁNICA DE SUELOS (EMS) se define como:",
+    options: ["Un ensayo de laboratorio aislado", "Conjunto de exploraciones e investigaciones de campo, ensayos de laboratorio y análisis de gabinete que estudian el comportamiento de los suelos ante solicitaciones estáticas y dinámicas de una edificación; obligatoriamente considerado en el diseño estructural y del sostenimiento", "Reporte municipal de uso de suelo", "Un plano topográfico con perforaciones"],
+    correct: 1,
+    hint: "Exploraciones + laboratorio + gabinete; obligatorio en diseño.",
+    feedback: "Def. 5.33: EMS = conjunto de exploraciones e investigaciones de campo, ensayos de laboratorio y análisis de gabinete que estudian el comportamiento de los suelos ante solicitaciones estáticas y dinámicas; debe ser obligatoriamente considerado en el diseño estructural y del sostenimiento de excavaciones y durante la construcción."
+  },
+  {
+    q: "La GEODINÁMICA EXTERNA (def. 5.35) incluye fenómenos como:",
+    options: ["Sismos tectónicos profundos", "Erupciones volcánicas, inundaciones, huaycos, avalanchas, tsunamis y activación de fallas geológicas", "Asentamientos por consolidación", "Licuación de arenas"],
+    correct: 1,
+    hint: "Fenómenos superficiales dinámicos.",
+    feedback: "Def. 5.35: geodinámica externa = conjunto de fenómenos geológicos de carácter dinámico que pueden actuar sobre el terreno del EMS, tales como erupciones volcánicas, inundaciones, huaycos, avalanchas, tsunamis y activación de fallas geológicas."
+  },
+  {
+    q: "El INFORME TÉCNICO DE SUELOS (ITS, def. 5.36) se caracteriza por:",
+    options: ["Tener la misma rigurosidad técnica del EMS", "Informe técnico sin la rigurosidad del EMS, con al menos 3 puntos de exploración a 3 m de profundidad, para edificaciones de hasta 3 pisos, < 500 m² en planta y sin sótano", "Ser obligatorio en edificaciones esenciales", "Incluir análisis dinámico del suelo"],
+    correct: 1,
+    hint: "Sin rigurosidad del EMS, edificios pequeños.",
+    feedback: "Def. 5.36: ITS = informe técnico sin la rigurosidad del EMS; comprende no menos de 3 puntos de exploración a 3 m de profundidad, para edificaciones con no más de 3 pisos, < 500 m² en planta del primer piso y sin sótano; debe ser obligatoriamente considerado en el diseño."
+  },
+  {
+    q: "La LICUACIÓN de suelos (def. 5.37) es:",
+    options: ["Disolución química del suelo por aguas ácidas", "Fenómeno causado por la vibración de los sismos en suelos granulares sumergidos, que produce el incremento de la presión del agua dentro del suelo con la consecuente reducción de la tensión efectiva", "Consolidación primaria de arcillas", "Infiltración de agua subterránea"],
+    correct: 1,
+    hint: "Suelos granulares SUMERGIDOS + sismo.",
+    feedback: "Def. 5.37: licuación = fenómeno causado por la vibración de sismos en suelos granulares sumergidos, que produce incremento de la presión del agua en los vacíos y la consecuente reducción de la tensión efectiva; reduce capacidad de carga y rigidez del suelo."
+  },
+  {
+    q: "La LONGITUD LIBRE (tramo libre, def. 5.38) es:",
+    options: ["La porción del anclaje embebida en el bulbo", "Zona del elemento estructural de acero (cables o barras) comprendida entre el cabezal y el bulbo, protegida con tubería plástica flexible llena de grasa para evitar fricción con el suelo o roca", "La parte expuesta del muro de contención", "El tramo de pilote sin fricción lateral"],
+    correct: 1,
+    hint: "Entre el cabezal y el bulbo; con grasa y tubería.",
+    feedback: "Def. 5.38: longitud libre (tramo libre) = zona del elemento de acero entre cabezal y bulbo, protegida del intemperismo con tubería plástica flexible llena de grasa para evitar fricción con el suelo o roca, permitiendo transferir la carga del cabezal al bulbo."
+  },
+  {
+    q: "El NIVEL FREÁTICO (def. 5.40) es:",
+    options: ["El nivel de fondo de la cimentación", "Nivel superior del agua subterránea en el momento de la exploración, que puede darse respecto a la superficie del terreno o a una cota de referencia", "El nivel de aguas máximas por lluvia", "El nivel de la capa impermeable más profunda"],
+    correct: 1,
+    hint: "Nivel superior del agua subterránea al momento de la exploración.",
+    feedback: "Def. 5.40: nivel freático = nivel superior del agua subterránea en el momento de la exploración, referido a la superficie del terreno o a una cota de referencia."
+  },
+  {
+    q: "Una OBRA DEFINITIVA, según la Norma, tiene una duración:",
+    options: ["Mayor a 6 meses", "Mayor a 1 año", "Mayor a 2 años", "Mayor a 10 años"],
     correct: 2,
-    hint: "Es menor que el estático (3,0).",
-    feedback: "Para la solicitación máxima por sismo o viento (la más desfavorable) el FS mínimo es 2,5 (Art. 21)."
+    hint: "Complementa a 'provisional' (≤ 2 años).",
+    feedback: "Def. 5.41: obra definitiva = duración mayor a dos (2) años. Complementa a la definición 5.55 de 'provisional' (≤ 2 años)."
   },
   {
-    q: "¿Cuál es la profundidad MÍNIMA de cimentación para zapatas y cimientos corridos de elementos portantes no arriostrados?",
-    options: ["0,40 m", "0,60 m", "0,80 m", "1,00 m"],
+    q: "Un PILAR (def. 5.42) es un elemento de cimentación profunda con:",
+    options: ["Diámetros ≤ 0,30 m", "Diámetros ≤ 0,90 m", "Diámetros mayores a 0,90 m, con relación Df/B > 5", "Diámetros ≥ 2,00 m solamente"],
     correct: 2,
-    hint: "Recuerda el criterio del numeral 26.2.",
-    feedback: "La profundidad mínima de cimentación es 0,80 m, excepto sobre roca donde el PR puede definir un valor menor (numeral 26.2)."
+    hint: "Mayor que 0,90 m.",
+    feedback: "Def. 5.42: pilar = cimentación profunda con diámetros mayores a 0,90 m y relación Df/B > 5."
   },
   {
-    q: "Un ITS (Informe Técnico de Suelos) es aplicable a edificaciones con:",
-    options: [
-      "Hasta 3 pisos, menos de 500 m² en planta del primer piso, sin sótano y sin platea",
-      "Hasta 5 pisos, cualquier área",
-      "Cualquier edificación con cimentación profunda",
-      "Solo edificios industriales"
-    ],
-    correct: 0,
-    hint: "El ITS es para obras 'pequeñas' y suelos conocidos.",
-    feedback: "El ITS aplica a edificaciones de hasta 3 pisos, área techada en planta del primer piso < 500 m², sin sótano y que no requiera platea o losa de cimentación (numeral 6.3.1)."
-  },
-  {
-    q: "El ITS exige como mínimo:",
-    options: [
-      "1 punto de exploración a 1 m",
-      "2 puntos de exploración a 2 m",
-      "3 puntos de exploración a 3 m de profundidad",
-      "5 puntos de exploración a 5 m"
-    ],
-    correct: 2,
-    hint: "La cifra se repite (3 y 3).",
-    feedback: "Se exigen no menos de 3 puntos de exploración hasta la profundidad mínima de 3 m (numeral 6.3.1 / definición 5.36)."
-  },
-  {
-    q: "¿Cuál de los siguientes NO es un suelo permitido para apoyar cimentaciones?",
-    options: [
-      "Arena bien graduada (SW)",
-      "Grava limosa (GM)",
-      "Turba o suelo orgánico",
-      "Arcilla inorgánica de baja plasticidad (CL)"
-    ],
-    correct: 2,
-    hint: "Art. 24 lista los prohibidos.",
-    feedback: "No se cimienta sobre turba, suelo orgánico, tierra vegetal, desmonte, rellenos sanitarios/industriales ni rellenos no controlados (Art. 24)."
-  },
-  {
-    q: "Un Relleno Controlado con MÁS DE 12% de finos se compacta a una densidad mínima de:",
-    options: [
-      "85% del Proctor Modificado",
-      "90% del Proctor Modificado",
-      "95% del Proctor Modificado",
-      "100% del Proctor Modificado"
-    ],
+    q: "Un PILOTE (def. 5.43) es un elemento de cimentación profunda con:",
+    options: ["Diámetros ≤ 0,30 m exclusivamente", "Diámetros menores o iguales a 0,90 m, con relación Df/B > 5", "Diámetros mayores a 0,90 m", "Diámetros entre 1,00 y 2,00 m"],
     correct: 1,
-    hint: "Con más finos se tolera algo menos de compactación.",
-    feedback: "Con más de 12% de finos: ≥ 90% del Proctor Modificado (NTP 339.141). Con ≤ 12% de finos: ≥ 95% (numeral 25.4.2)."
+    hint: "Hasta 0,90 m de diámetro.",
+    feedback: "Def. 5.43: pilote = cimentación profunda con diámetros menores o iguales a 0,90 m, con relación Df/B > 5."
   },
   {
-    q: "La frecuencia mínima de control de compactación en un Relleno Controlado es:",
-    options: [
-      "1 control por cada 100 m²",
-      "1 control por cada 250 m² o fracción, mínimo 3 por capa",
-      "1 control por cada 500 m²",
-      "Solo 1 control por capa"
-    ],
+    q: "Los PILOTES DE CARGA POR FRICCIÓN transmiten la carga:",
+    options: ["A un estrato resistente bajo la punta", "A lo largo de su cuerpo por fricción con el suelo que los circunda", "Por anclajes activos en el bulbo", "Por compresión del cabezal"],
     correct: 1,
-    hint: "Tres es el mínimo por capa.",
-    feedback: "Se realiza 1 control por cada 250 m² o fracción, con un mínimo de 3 controles por capa. Espesor máximo a controlar: 0,30 m (numeral 25.4.3)."
+    hint: "Definición 5.44.",
+    feedback: "Def. 5.44: pilotes de carga por fricción = aquellos que transmiten la carga a lo largo de su cuerpo por fricción con el suelo que los circunda."
   },
   {
-    q: "La CAPACIDAD DE CARGA (qd) de un suelo se define como:",
-    options: [
-      "La presión admisible con factor de seguridad incluido",
-      "La presión última o de falla por corte del suelo (sin FS)",
-      "La presión promedio bajo cargas de servicio",
-      "El peso propio de la cimentación"
-    ],
-    correct: 1,
-    hint: "Es la 'última', sin aplicar FS.",
-    feedback: "La capacidad de carga (qd) es la presión última o de falla por corte del suelo, sin factor de seguridad (Art. 20 / definición 5.9)."
-  },
-  {
-    q: "¿Cuál es la definición de PRESIÓN ADMISIBLE en la E.050?",
-    options: [
-      "Presión última del suelo sin factor de seguridad",
-      "Máxima presión que puede transmitir la cimentación sin generar asentamientos excesivos ni FS menor al del Art. 21",
-      "Presión causada por el peso propio de la cimentación",
-      "Presión igual a la carga muerta dividida entre el área de la zapata"
-    ],
-    correct: 1,
-    hint: "Se define en términos de asentamiento y FS.",
-    feedback: "Presión admisible: máxima presión que la cimentación puede transmitir al terreno sin que ocurran asentamientos excesivos ni que el FS frente a falla por corte sea menor al del Art. 21 (definición 5.47)."
-  },
-  {
-    q: "En suelos cohesivos, para el cálculo de capacidad de carga la Norma emplea un ángulo de fricción interna igual a:",
-    options: ["0°", "15°", "30°", "45°"],
-    correct: 0,
-    hint: "Cohesivo = controlado por cohesión.",
-    feedback: "En suelos cohesivos (arcilla, arcilla limosa, limo arcilloso), φ = 0 en la fórmula de capacidad de carga; la resistencia la aporta la cohesión (numeral 20.2)."
-  },
-  {
-    q: "En suelos friccionantes (gravas, arenas, gravas-arenosas), la cohesión c se asume como:",
-    options: ["0", "1 kg/cm²", "igual al peso unitario", "igual al ángulo de fricción"],
-    correct: 0,
-    hint: "Los suelos granulares no tienen cohesión real.",
-    feedback: "En suelos friccionantes se emplea c = 0 en la ecuación de capacidad de carga (numeral 20.3)."
-  },
-  {
-    q: "Según la Tabla 8 (distorsión angular), el límite seguro para edificios donde NO se permiten grietas es aproximadamente:",
-    options: ["1/150", "1/300", "1/500", "1/750"],
-    correct: 2,
-    hint: "Valor conservador entre 1/300 y 1/750.",
-    feedback: "α = 1/500 es el límite seguro para edificios en los que no se permiten grietas. A 1/300 ya se esperan primeras grietas en paredes y a 1/150 se espera daño estructural (Tabla 8)."
-  },
-  {
-    q: "En suelos granulares, el asentamiento diferencial se puede estimar como qué porcentaje del asentamiento total:",
-    options: ["25%", "50%", "75%", "100%"],
-    correct: 2,
-    hint: "Numeral 19.2.",
-    feedback: "En suelos granulares el asentamiento diferencial se estima como el 75% del asentamiento total (numeral 19.2)."
-  },
-  {
-    q: "La PROFUNDIDAD ACTIVA de cimentación corresponde a la zona entre el nivel de cimentación y la isóbara correspondiente a:",
-    options: [
-      "5% de la presión aplicada",
-      "10% de la presión aplicada",
-      "25% de la presión aplicada",
-      "50% de la presión aplicada"
-    ],
-    correct: 1,
-    hint: "Definición 5.53 y 5.6 (bulbo de presiones).",
-    feedback: "La profundidad activa (y el bulbo de presiones) se define por la isóbara del 10% de la presión aplicada/contacto (definiciones 5.6 y 5.53)."
-  },
-  {
-    q: "Son casos donde es OBLIGATORIO un EMS:",
-    options: [
-      "Sólo edificios de más de 10 pisos",
-      "Edificaciones en general de uso esencial (colegios, hospitales), industriales, con sótano, de 4 o más pisos, con muros de contención > 2 m, entre otros",
-      "Sólo viviendas unifamiliares",
-      "Únicamente obras de infraestructura vial"
-    ],
-    correct: 1,
-    hint: "Numeral 6.2.1 enumera varios casos.",
-    feedback: "Es obligatorio EMS en edificaciones esenciales, industriales, de 4 o más pisos, cualquiera con sótano o cimentación profunda, muros de contención > 2 m, entre otros casos (numeral 6.2.1)."
-  },
-  {
-    q: "Un suelo COLAPSABLE es aquel que:",
-    options: [
-      "Aumenta de volumen al humedecerse",
-      "Al humedecerse o saturarse sufre un asentamiento o colapso relativamente rápido",
-      "Tiene alta resistencia al corte",
-      "Se licúa durante sismos"
-    ],
-    correct: 1,
-    hint: "Pierde volumen, no lo gana.",
-    feedback: "Suelo colapsable: al humedecerse o saturarse sufre un asentamiento o colapso relativamente rápido que pone en peligro la estructura (definición 5.61 y Art. 35)."
-  },
-  {
-    q: "Un suelo EXPANSIVO es aquel que:",
-    options: [
-      "Reduce volumen al secarse sin restitución",
-      "Al humedecerse o saturarse sufre expansión que pone en peligro la estructura",
-      "No cambia de volumen con la humedad",
-      "Es siempre granular"
-    ],
-    correct: 1,
-    hint: "Es el opuesto al colapsable.",
-    feedback: "Suelo expansivo: al humedecerse o saturarse sufre una expansión que pone en peligro las estructuras cimentadas sobre él (definición 5.62 y Art. 37)."
-  },
-  {
-    q: "El índice de colapso (Ic) límite que NO puede excederse dentro de la zona activa de cimentación es:",
-    options: [
-      "Ic > 2 (leve)",
-      "Ic > 6 (moderadamente severo)",
-      "Ic > 10 (severo)",
-      "Ic > 20"
-    ],
-    correct: 1,
-    hint: "Tabla 10 — moderadamente severo.",
-    feedback: "Dentro de la zona activa no se admite Ic > 6 por considerarse colapso moderadamente severo (numeral 35.3.4 y Tabla 10)."
-  },
-  {
-    q: "Las perforaciones para evaluar licuación de suelos deben tener una profundidad MÍNIMA de:",
-    options: ["5 m", "10 m", "15 m", "20 m"],
-    correct: 2,
-    hint: "Numeral 38.4.3.",
-    feedback: "Las perforaciones para análisis de licuación deben tener profundidad mínima de 15 m, con ensayos SPT espaciados obligatoriamente cada 1 m (numeral 38.4.3)."
-  },
-  {
-    q: "Para que un suelo granular sea susceptible de LICUAR durante un sismo debe:",
-    options: [
-      "Estar sobre el nivel freático",
-      "Estar sumergido y ser arena, arena limosa/arcillosa, limo arenoso no plástico o grava empacada en esos materiales",
-      "Tener alta plasticidad",
-      "Ser una arcilla saturada"
-    ],
-    correct: 1,
-    hint: "Dos condiciones simultáneas: tipo + agua.",
-    feedback: "Debe presentar simultáneamente: (a) ser arena, arena limosa/arcillosa, limo arenoso no plástico o grava empacada en esos materiales y (b) encontrarse sumergido (numeral 38.2)."
-  },
-  {
-    q: "Si el pH del agua/suelo es menor a 4,0 se debe:",
-    options: [
-      "No tomar acción, el pH no afecta al concreto",
-      "Proponer medidas de protección adecuadas contra ATAQUE ÁCIDO del concreto",
-      "Aumentar el factor de seguridad al doble",
-      "Reemplazar la cimentación por pilotes"
-    ],
-    correct: 1,
-    hint: "pH bajo = ácido.",
-    feedback: "Con pH < 4,0 el PR propone medidas de protección adecuadas para el concreto simple o armado de las estructuras soterradas contra el ataque ácido (numeral 36.4.1)."
-  },
-  {
-    q: "Una Cimentación Continua se define como aquella en la que:",
-    options: [
-      "El largo L es igual al ancho B",
-      "El largo L es mayor que diez veces el ancho B (L > 10B)",
-      "Son zapatas aisladas conectadas por una viga",
-      "La base es circular"
-    ],
-    correct: 1,
-    hint: "L mucho mayor que B.",
-    feedback: "Cimentación continua: L > 10·B. Cuadrada: L = B. Rectangular: L ≤ 10·B (definiciones 5.17–5.19)."
-  },
-  {
-    q: "La Carga de Servicio se define como:",
-    options: [
-      "Carga viva más carga muerta más cargas inducidas por sismo, SIN factores de ampliación",
-      "Carga última mayorada",
-      "Carga muerta únicamente",
-      "Carga máxima de una máquina vibratoria"
-    ],
-    correct: 0,
-    hint: "Definición 5.11.",
-    feedback: "Carga de servicio = carga viva + carga muerta + cargas inducidas por sismos, sin factores de amplificación (definición 5.11)."
-  },
-  {
-    q: "Para el cálculo del FS de cimentaciones se utilizan como cargas aplicadas:",
-    options: [
-      "Las cargas últimas mayoradas",
-      "Las cargas de servicio usadas para el diseño estructural de las columnas del nivel más bajo",
-      "Sólo la carga muerta",
-      "El peso del suelo sobre la cimentación"
-    ],
-    correct: 1,
-    hint: "Artículo 17.1.",
-    feedback: "Para el cálculo del FS se emplean las Cargas de Servicio usadas en el diseño estructural de las columnas del nivel más bajo de la edificación (numeral 17.1)."
-  },
-  {
-    q: "En una perforación MANUAL, la profundidad máxima es:",
-    options: ["5 m", "10 m", "15 m", "Sin límite"],
-    correct: 1,
-    hint: "Numeral 14.2.2.",
-    feedback: "La profundidad máxima en perforación manual es 10 m; en perforación mecánica no tiene limitación (numeral 14.2.2)."
-  },
-  {
-    q: "El uso de POZOS O CALICATAS está prohibido en:",
-    options: [
-      "Arcillas de alta plasticidad",
-      "Suelos arenosos con porcentaje de finos ≤ 5%",
-      "Gravas bien graduadas",
-      "Suelos orgánicos"
-    ],
-    correct: 1,
-    hint: "Arenas 'limpias' colapsan las paredes.",
-    feedback: "Se prohíbe el uso de pozos o calicatas en suelos arenosos con finos ≤ 5% por razones de seguridad (numeral 14.2.1)."
-  },
-  {
-    q: "En perforaciones por lavado con agua (wash boring), el diámetro máximo es:",
-    options: ["2 pulgadas", "3 pulgadas", "4 pulgadas", "6 pulgadas"],
-    correct: 2,
-    hint: "Numeral 14.2.2 b).",
-    feedback: "En perforaciones por lavado con agua (wash boring) el diámetro no debe ser mayor a 4 pulgadas (numeral 14.2.2 b)."
-  },
-  {
-    q: "En pilotes INDIVIDUALES, el factor de seguridad mínimo para capacidad de carga mediante métodos estáticos es:",
-    options: ["1,5", "2,0", "2,5", "3,0"],
-    correct: 1,
-    hint: "Numeral 32.3.4 c-1.",
-    feedback: "En pilotes individuales FS ≥ 2,0. En grupos: FS ≥ 3,0 (estático) y FS ≥ 2,5 (dinámico) (numeral 32.3.4 c-1)."
-  },
-  {
-    q: "En un GRUPO DE PILOTES, el factor de seguridad mínimo para cargas estáticas es:",
-    options: ["1,5", "2,0", "2,5", "3,0"],
-    correct: 3,
-    hint: "Más exigente que pilote individual.",
-    feedback: "FS ≥ 3,0 para cargas estáticas en grupos de pilotes; FS ≥ 2,5 para cargas dinámicas (numeral 32.3.4 c-1)."
-  },
-  {
-    q: "El espaciamiento mínimo entre ejes de pilotes para L < 10 m es:",
-    options: ["2b", "3b", "4b", "5b"],
-    correct: 1,
-    hint: "Tabla 9: L corto = menor espaciamiento.",
-    feedback: "Tabla 9: L < 10 m → 3b; 10 ≤ L < 25 → 4b; L ≥ 25 → 5b. Además, para pilotes de fricción el espaciamiento no es menor de 1,20 m (numeral 32.3.4 d)."
-  },
-  {
-    q: "La prueba de INTEGRIDAD de pilotes (ASTM D 5882) debe efectuarse en:",
-    options: [
-      "10% de los pilotes instalados",
-      "50% de los pilotes instalados",
-      "100% de los pilotes instalados",
-      "Sólo los pilotes de esquina"
-    ],
-    correct: 2,
-    hint: "Numeral 32.4.2.",
-    feedback: "La verificación del buen estado físico debe efectuarse al 100% de los pilotes instalados mediante pruebas de integridad de bajo impacto (ASTM D 5882) (numeral 32.4.2)."
-  },
-  {
-    q: "La tolerancia máxima de desplazamiento del eje en planta de un pilote instalado respecto al plano es:",
-    options: ["0,05 m", "0,10 m", "0,20 m", "0,50 m"],
-    correct: 1,
-    hint: "Numeral 32.4.3 a).",
-    feedback: "Desplazamiento del eje en planta ≤ 0,10 m e inclinación del eje ≤ 2° respecto al plano (numeral 32.4.3)."
-  },
-  {
-    q: "Se define PILAR como elemento de cimentación profunda con diámetros:",
-    options: [
-      "Menores o iguales a 0,30 m",
-      "Menores o iguales a 0,90 m",
-      "Mayores a 0,90 m",
-      "Mayores a 2,00 m"
-    ],
-    correct: 2,
-    hint: "Pilar > pilote en diámetro.",
-    feedback: "Pilar: diámetro > 0,90 m y Df/B > 5. Pilote: diámetro ≤ 0,90 m (definiciones 5.42 y 5.43)."
-  },
-  {
-    q: "Un pilote de CARGA POR PUNTA transmite la carga:",
-    options: [
-      "Por fricción con el suelo que lo circunda",
-      "A un estrato resistente ubicado bajo la punta",
-      "Al nivel freático",
-      "Al encepado superficial"
-    ],
+    q: "Los PILOTES DE CARGA POR PUNTA (def. 5.45) transmiten la carga:",
+    options: ["Por fricción con el suelo circundante", "A un estrato resistente ubicado bajo la punta", "A través del cabezal solamente", "Por presión de poros"],
     correct: 1,
     hint: "Está en el nombre.",
-    feedback: "Los pilotes de carga por punta transmiten la carga a un estrato resistente ubicado bajo la punta. Los pilotes de fricción lo hacen por fricción lateral (definiciones 5.44 y 5.45)."
+    feedback: "Def. 5.45: pilotes de carga por punta = aquellos que transmiten la carga a un estrato resistente ubicado bajo la punta."
   },
   {
-    q: "La FRICCIÓN NEGATIVA en un pilote ocurre cuando:",
-    options: [
-      "El suelo se mueve hacia arriba respecto al pilote",
-      "Hay desplazamiento relativo hacia abajo del suelo con respecto al pilote, generando una fuerza de arrastre descendente",
-      "La fricción es en sentido horizontal",
-      "El pilote trabaja sólo a tracción"
-    ],
+    q: "La PRESIÓN ADMISIBLE (def. 5.47) se define como:",
+    options: ["Presión última del suelo sin FS", "Máxima presión que la cimentación puede transmitir al terreno sin que ocurran asentamientos excesivos (mayores al admisible) ni FS frente a falla por corte menor al del Art. 21", "Presión promedio bajo la zapata", "Peso de la cimentación dividido entre el área efectiva"],
     correct: 1,
-    hint: "Arrastre hacia abajo.",
-    feedback: "La fricción negativa es una fuerza de arrastre hacia abajo ejercida sobre el pilote por el suelo circundante (por consolidación de rellenos, descenso del N.F., etc.) y se considera como carga adicional (numeral 32.3.4 e-f)."
+    hint: "Criterio doble: asentamientos + FS.",
+    feedback: "Def. 5.47: presión admisible = máxima presión que la cimentación puede transmitir al terreno sin que ocurran asentamientos excesivos (mayores al admisible) ni que el FS frente a falla por corte sea menor al valor del Art. 21."
   },
   {
-    q: "Un CAJÓN de cimentación con relación Df/B menor o igual a 5 se diseña como:",
-    options: [
-      "Cimentación superficial",
-      "Pilar",
-      "Pilote de fricción",
-      "Anclaje"
-    ],
+    q: "La PRESIÓN APLICADA o PRESIÓN DE CONTACTO (qap, def. 5.49) es:",
+    options: ["Presión admisible dividida entre el FS", "Valor de la presión uniforme aplicada por el área efectiva de la zapata (B' x L') sobre el suelo en el plano de apoyo de la cimentación", "Presión última del suelo sin FS", "Presión del agua subterránea"],
+    correct: 1,
+    hint: "Presión uniforme por ÁREA EFECTIVA (B'·L').",
+    feedback: "Def. 5.49: presión aplicada o de contacto (qap) = carga transmitida por las estructuras al terreno en el nivel de cimentación, como valor de la presión uniforme aplicada por el área efectiva de la zapata (B' x L') sobre el suelo."
+  },
+  {
+    q: "El PROFESIONAL RESPONSABLE (PR, def. 5.51) es:",
+    options: ["Arquitecto colegiado", "Ingeniero Civil registrado y habilitado por el Colegio de Ingenieros del Perú", "Ingeniero geólogo exclusivamente", "Cualquier profesional con experiencia en suelos"],
+    correct: 1,
+    hint: "Ingeniero Civil CIP habilitado.",
+    feedback: "Def. 5.51: PR = Ingeniero Civil, registrado y habilitado por el Colegio de Ingenieros del Perú."
+  },
+  {
+    q: "El PROFESIONAL RESPONSABLE DEL DISEÑO DEL SOSTENIMIENTO (PRS, def. 5.52) es:",
+    options: ["Cualquier arquitecto con experiencia", "Ingeniero Civil registrado y habilitado por el CIP, con experiencia en diseño de sistemas de sostenimiento", "Topógrafo acreditado", "Ingeniero geotécnico de laboratorio"],
+    correct: 1,
+    hint: "Similar al PR pero con experiencia específica en sostenimiento.",
+    feedback: "Def. 5.52: PRS = Ingeniero Civil, registrado y habilitado por el CIP, con experiencia en diseño de sistemas de sostenimiento."
+  },
+  {
+    q: "La PROFUNDIDAD ACTIVA (def. 5.53) corresponde a la zona del suelo entre:",
+    options: ["La superficie del terreno y el nivel freático", "El nivel de cimentación y la isóbara correspondiente al 10% de la presión aplicada por la cimentación", "La superficie y el estrato de apoyo", "El fondo de la zapata y los 2 m inferiores"],
+    correct: 1,
+    hint: "Desde el nivel de cimentación hasta la isóbara del 10%.",
+    feedback: "Def. 5.53: profundidad activa = zona del suelo ubicada entre el nivel de cimentación y la isóbara correspondiente al 10% de la presión aplicada por la cimentación; presupone que el suelo continúa por debajo sin rellenos no controlados."
+  },
+  {
+    q: "La PROFUNDIDAD DE CIMENTACIÓN Df (def. 5.54) es la profundidad medida:",
+    options: ["Siempre desde el nivel de piso terminado de la planta baja", "Respecto al nivel de terreno natural o al nivel de piso terminado, el que resulte menor; en sótanos, desde el nivel del piso terminado del sótano más profundo al fondo de cimentación", "Desde el nivel freático hasta la base de la zapata", "Desde el centroide de la estructura al nivel de apoyo"],
+    correct: 1,
+    hint: "El MENOR entre terreno natural y piso terminado; en sótanos desde el piso más profundo.",
+    feedback: "Def. 5.54: Df = profundidad al fondo o desplante de la cimentación, medida respecto al nivel de terreno natural o al nivel de piso terminado, el que resulte menor. En sótanos: desde el nivel de piso terminado del sótano más profundo al fondo de cimentación."
+  },
+  {
+    q: "Una obra PROVISIONAL (def. 5.55) tiene una duración:",
+    options: ["No mayor a 6 meses", "No mayor a 1 año", "No mayor a 2 años contados a partir del inicio de las obras de excavación", "No mayor a 5 años"],
+    correct: 2,
+    hint: "Es el complemento de 'definitiva'.",
+    feedback: "Def. 5.55: provisional = obras con duración no mayor a dos (2) años contados a partir del inicio de las obras de excavación. Si se extiende más, debe pasar a definitivo con FS mínimo de 1,50 estático y 1,25 pseudodinámico."
+  },
+  {
+    q: "Si una obra provisional se extiende por un plazo mayor a 2 años, el sistema de sostenimiento debe rediseñarse como definitivo con FS mínimo de:",
+    options: ["1,00 estático y 0,75 pseudodinámico", "1,50 estático y 1,25 pseudodinámico", "2,00 estático y 1,50 pseudodinámico", "3,00 estático y 2,50 pseudodinámico"],
+    correct: 1,
+    hint: "Valores modestos (1,5 / 1,25).",
+    feedback: "Def. 5.55: si el plazo excede 2 años, el contratista debe tomar medidas para que el sistema pase a definitivo y se rediseñe y construya con FS mínimo de 1,50 estático y 1,25 pseudodinámico."
+  },
+  {
+    q: "Un RELLENO CONTROLADO o DE INGENIERÍA (def. 5.57) es aquel que:",
+    options: ["Se coloca sin control de compactación", "Se construye con Material Seleccionado, compactado y controlado de acuerdo al numeral 25.4", "Solo admite gravas mayores a 3\"", "Se exige en todos los rellenos naturales"],
+    correct: 1,
+    hint: "Material Seleccionado + compactación controlada (25.4).",
+    feedback: "Def. 5.57: relleno controlado o de ingeniería = aquel que se construye con Material Seleccionado, compactado y controlado de acuerdo al numeral 25.4."
+  },
+  {
+    q: "Una ROCA APTA para apoyar cimentaciones (def. 5.59) debe presentar una alteración:",
+    options: ["Menor al 10% del área de la cimentación", "Menor al 25% del área de la cimentación", "Menor al 50% del área de la cimentación", "No hay límite siempre que sea roca"],
     correct: 0,
-    hint: "La relación Df/B determina el tratamiento.",
-    feedback: "Si Df/B ≤ 5, el cajón se diseña como cimentación superficial. Si Df/B > 5, se diseña como pilar (Art. 34.2)."
+    hint: "10% máximo.",
+    feedback: "Def. 5.59: la roca apta presenta alteración menor al 10% del área de la cimentación. Las rocas blandas o disgregables manualmente se tratan como suelo para efectos de cálculos geotécnicos."
   },
   {
-    q: "Un ANCLAJE ACTIVO es aquel que:",
-    options: [
-      "Se instala pero no se tensa",
-      "Es únicamente para obras provisionales",
-      "Se instala y se tensa posteriormente, introduciendo una fuerza adicional en la dirección determinada por el PRS",
-      "Se usa sólo en roca"
-    ],
+    q: "El SOLICITANTE del EMS (def. 5.60) es:",
+    options: ["La entidad municipal que autoriza la obra", "Persona natural o jurídica con quien el PR contrata el EMS o el ITS", "El laboratorio de ensayos de suelos", "El colegio profesional"],
+    correct: 1,
+    hint: "Quien CONTRATA al PR.",
+    feedback: "Def. 5.60: solicitante = persona natural o jurídica con quien el PR contrata el EMS o el ITS."
+  },
+  {
+    q: "Un SUELO ORGÁNICO (def. 5.63) se identifica por una variación mayor al 25% entre los LL:",
+    options: ["Medidos en dos laboratorios distintos", "De la muestra secada al aire y la muestra secada al horno a 110 °C ± 5 °C durante 24 h", "De la muestra natural y la muestra compactada", "De la muestra superficial y la muestra profunda"],
+    correct: 1,
+    hint: "LL al aire vs. al horno (110 °C, 24 h).",
+    feedback: "Def. 5.63: suelo orgánico = suelo de color oscuro que presenta una variación mayor al 25% entre los límites líquidos de la muestra secada al aire y la secada al horno a 110 °C ± 5 °C durante 24 h."
+  },
+  {
+    q: "¿Cuál de los siguientes NO es un caso donde existe OBLIGATORIEDAD de un EMS según el numeral 6.2.1?",
+    options: ["Hospitales, colegios, universidades y estadios", "Edificación de 4 o más pisos de altura, cualquiera que sea su área", "Vivienda unifamiliar de un piso con 80 m² en zona con condiciones de cimentación conocidas y suelos uniformes", "Muros de contención con alturas mayores a 2,00 m"],
     correct: 2,
-    hint: "Definición 5.2.",
-    feedback: "Anclaje Activo: instalado y tensado posteriormente a su instalación, introduciendo una fuerza adicional al suelo o estructura en magnitud y dirección determinada por el PRS (definición 5.2)."
+    hint: "Una vivienda pequeña en suelo conocido puede ir con ITS.",
+    feedback: "Numeral 6.2.1: sí son obligatorios EMS edificaciones esenciales, industriales, 4+ pisos, sótanos, muros > 2 m, entre otros. Una vivienda pequeña con suelos uniformes puede tramitarse vía ITS (numeral 6.3)."
   },
   {
-    q: "Una obra es considerada DEFINITIVA cuando su duración se extiende por un período:",
-    options: [
-      "Mayor a 6 meses",
-      "Mayor a 1 año",
-      "Mayor a 2 años",
-      "Mayor a 5 años"
-    ],
-    correct: 2,
-    hint: "Definiciones 5.41 y 5.55.",
-    feedback: "Obra definitiva: duración > 2 años. Provisional: duración ≤ 2 años desde el inicio de las obras de excavación (definiciones 5.41 y 5.55)."
-  },
-  {
-    q: "Para obras de sostenimiento PROVISIONAL, si la obra se extiende más de 2 años, el sistema debe rediseñarse como definitivo con FS mínimo de:",
-    options: [
-      "1,0 estático y 0,75 pseudodinámico",
-      "1,50 estático y 1,25 pseudodinámico",
-      "2,0 estático y 1,5 pseudodinámico",
-      "3,0 estático y 2,5 pseudodinámico"
-    ],
-    correct: 1,
-    hint: "FS modestos (1,5 / 1,25).",
-    feedback: "Si el sistema provisional pasa a definitivo debe rediseñarse con FS mínimo de 1,50 estático y 1,25 pseudodinámico (definición 5.55)."
-  },
-  {
-    q: "El Profesional Responsable (PR) del EMS debe ser:",
-    options: [
-      "Cualquier profesional universitario",
-      "Ingeniero Civil registrado y habilitado por el Colegio de Ingenieros del Perú",
-      "Arquitecto colegiado",
-      "Ingeniero geólogo exclusivamente"
-    ],
-    correct: 1,
-    hint: "Definición 5.51.",
-    feedback: "El PR es un Ingeniero Civil, registrado y habilitado por el Colegio de Ingenieros del Perú. El PR firma el EMS y no puede delegar la responsabilidad (definición 5.51, Art. 9)."
-  },
-  {
-    q: "El SUELO ORGÁNICO se identifica por una variación en el LL secado al aire vs. horno (110°C ± 5°C, 24 h) mayor al:",
-    options: ["5%", "10%", "15%", "25%"],
-    correct: 3,
-    hint: "Definición 5.63.",
-    feedback: "Suelo orgánico: color oscuro con variación > 25% entre los límites líquidos de la muestra secada al aire y al horno a 110°C ± 5°C durante 24 h (definición 5.63)."
-  },
-  {
-    q: "Los MATERIALES SELECCIONADOS para relleno deben tener:",
-    options: [
-      "Partículas no mayores a 30 cm y 70% que pasa la malla 200",
-      "Partículas no mayores a 7,5 cm (3\"), ≤ 30% retenido en malla ¾\", < 50% pasa malla 200, IP ≤ 6 y sin elementos distintos",
-      "Cualquier material compactable",
-      "Solo arena bien graduada"
-    ],
-    correct: 1,
-    hint: "Numeral 25.2.1.",
-    feedback: "Material seleccionado: partículas ≤ 7,5 cm (3\"), ≤ 30% retenido en malla ¾\", < 50% pasa malla 200, IP ≤ 6 y sin elementos distintos de suelos naturales (numeral 25.2.1)."
-  },
-  {
-    q: "¿Cuál es el espaciamiento SPT en perforaciones para análisis de licuación?",
-    options: [
-      "Cada 0,30 m",
-      "Cada 0,60 m",
-      "Cada 1,00 m",
-      "Cada 2,00 m"
-    ],
-    correct: 2,
-    hint: "Números enteros.",
-    feedback: "Dentro de las perforaciones para análisis de licuación, los ensayos SPT se realizan obligatoriamente espaciados cada 1 m (numeral 38.4.3)."
-  },
-  {
-    q: "El ataque por CLORUROS al concreto armado activa medidas de protección cuando el ión cloro es mayor a:",
-    options: ["0,05 %", "0,15 %", "0,50 %", "1,00 %"],
-    correct: 1,
-    hint: "Es una décima y media.",
-    feedback: "Cuando el contenido de ión cloro determinado por NTP 400.014 sea mayor a 0,15 %, el PR recomienda medidas de protección; los cloruros atacan el acero de refuerzo (numeral 36.4.3)."
-  },
-  {
-    q: "Según Tabla 1, una estructura de muros portantes de albañilería de 4 a 8 pisos se clasifica como tipo:",
-    options: ["I", "II", "III", "IV"],
+    q: "El ITS puede ser empleado cuando la edificación tenga:",
+    options: ["Hasta 3 pisos, menos de 500 m² en planta del primer piso, sin sótano y sin requerir platea o losa de cimentación; en sitios con condiciones de cimentación conocidas y suelos uniformes", "Hasta 5 pisos con sótano", "Cualquier número de pisos si el terreno es rocoso", "Más de 500 m² siempre que no tenga sótano"],
     correct: 0,
-    hint: "Albañilería 4–8 pisos es exigente.",
-    feedback: "Muros portantes de albañilería (L < 12 m): tipo II hasta 3 pisos y tipo I de 4 a 8 pisos; para > 8 no se admite (Tabla 1)."
+    hint: "Numeral 6.3.1 — pequeñas edificaciones y suelos uniformes.",
+    feedback: "Numeral 6.3.1: el ITS se aplica a lugares con condiciones de cimentación conocidas y suelos uniformes, sin los problemas especiales del Cap. VI, con áreas techadas < 500 m² en planta, hasta 3 pisos y sin sótano, y que no requieran platea o losa."
   },
   {
-    q: "El BULBO DE PRESIONES corresponde a la zona bajo la cimentación dentro del contorno de la isóbara igual al:",
-    options: ["5% de la presión de contacto", "10% de la presión de contacto", "20% de la presión de contacto", "50% de la presión de contacto"],
+    q: "Tanto el EMS como el ITS deben incluir obligatoriamente una hoja de:",
+    options: ["Autorización municipal", "Resumen de las Condiciones de Cimentación, que además debe transcribirse en el plano de cimentación", "Costo presupuestado del estudio", "Lista de empresas subcontratadas"],
     correct: 1,
-    hint: "Coincide con la profundidad activa.",
-    feedback: "El bulbo de presiones (o de esfuerzos) es la zona bajo la superficie cargada delimitada por la isóbara del 10% de la presión de contacto (definición 5.6)."
+    hint: "Resumen de condiciones de cimentación (Anexo I).",
+    feedback: "Numerales 6.2.3 y 6.3.4: es obligatorio incluir la hoja 'Resumen de las Condiciones de Cimentación' (ver 16.2.1), que se transcribe obligatoriamente en el plano de cimentación. El formato obligatorio está en el Anexo I."
   },
   {
-    q: "Para el análisis de estabilidad de cimentaciones superficiales en taludes, el FS mínimo del TALUD en condición ESTÁTICA es:",
-    options: ["1,0", "1,25", "1,5", "2,0"],
+    q: "Los Estudios de Mecánica de Suelos se realizan con fines de (Art. 7.2):",
+    options: ["Solo diseño de cimentaciones", "Solo diseño de pavimentos", "Diseño de cimentaciones, diseño de pavimentos, estabilidad de taludes, diseño de instalaciones sanitarias de agua y alcantarillado, o cualquier combinación de los anteriores", "Únicamente evaluación ambiental"],
     correct: 2,
-    hint: "Numeral 30.3.",
-    feedback: "FS del talud mínimo: 1,5 en condición estática y 1,25 en condición sísmica (numeral 30.3)."
+    hint: "Cuatro finalidades posibles.",
+    feedback: "Art. 7.2: los EMS se realizan con fines de diseño de cimentaciones, pavimentos, estabilidad de taludes, diseño de instalaciones sanitarias de agua y alcantarillado, o cualquier combinación de ellos."
   },
   {
-    q: "El ASENTAMIENTO DIFERENCIAL TOLERABLE se define como:",
-    options: [
-      "El asentamiento total permitido",
-      "Máximo asentamiento diferencial entre dos elementos adyacentes unidos estructuralmente que al ocurrir no produce daños visibles ni problemas",
-      "El asentamiento promedio de la estructura",
-      "El asentamiento máximo admisible del terreno antes de licuar"
-    ],
+    q: "Sobre el ALCANCE del EMS (Art. 8), es correcto que:",
+    options: ["Sus resultados pueden extrapolarse a terrenos vecinos", "La información del EMS es válida solamente para el área y tipo de obra indicados en el informe firmado por el PR", "Se aplica a cualquier obra del mismo propietario durante 5 años", "Basta para habilitaciones urbanas completas"],
     correct: 1,
-    hint: "Palabra clave: 'adyacentes' y 'sin daños visibles'.",
-    feedback: "Asentamiento diferencial tolerable: máximo asentamiento diferencial entre dos elementos adyacentes unidos por un elemento estructural que al ocurrir no produce daños visibles ni causa problemas (definición 5.4)."
+    hint: "Específico al terreno y tipo de obra.",
+    feedback: "Art. 8.1-8.2: la información del EMS es válida solamente para el área y tipo de obra indicadas en el informe firmado por el PR; no se emplea en otros terrenos ni para otro tipo de obra."
   },
   {
-    q: "En los casos donde existe obligatoriedad de EMS, el informe debe ser firmado por:",
-    options: [
-      "Cualquier técnico de laboratorio",
-      "Un Profesional Responsable (PR), Ingeniero Civil colegiado y habilitado",
-      "El propietario del terreno",
-      "El supervisor municipal"
-    ],
+    q: "Respecto a la RESPONSABILIDAD PROFESIONAL por el EMS (Art. 9):",
+    options: ["El PR puede delegarla en un laboratorio acreditado", "Todo EMS es firmado por el PR, quien asume la responsabilidad del contenido y conclusiones; no está permitido delegar a terceros", "La responsabilidad recae en el municipio que aprueba el proyecto", "Es compartida entre el PR y el constructor"],
     correct: 1,
-    hint: "Responsabilidad indelegable.",
-    feedback: "Los informes obligatorios de EMS los firma un Profesional Responsable (PR), Ingeniero Civil registrado y habilitado, quien no puede delegar su responsabilidad (Art. 9, numeral 6.2.2)."
+    hint: "NO se puede delegar.",
+    feedback: "Art. 9: todo EMS es firmado por el PR, quien asume la responsabilidad del contenido y conclusiones. No está permitido que el PR delegue a terceros dicha responsabilidad."
   },
   {
-    q: "El EMS es válido para:",
-    options: [
-      "Cualquier terreno en la misma zona geográfica",
-      "Solamente el terreno y tipo de obra indicados en el informe firmado por el PR",
-      "Cinco años independientemente del terreno",
-      "Toda edificación del mismo propietario"
-    ],
-    correct: 1,
-    hint: "El EMS es específico a un sitio y obra.",
-    feedback: "El EMS es válido solamente para el área y tipo de obra indicadas en el informe firmado por el PR; no se emplea en otros terrenos u otro tipo de obra (Art. 8.1-8.2)."
-  },
-  {
-    q: "El coeficiente de capacidad de carga Nc para suelos puramente cohesivos (φ = 0) tiene el valor clásico de:",
-    options: ["2,57", "5,14", "9,00", "12,50"],
-    correct: 1,
-    hint: "Valor referenciado en el Art. 20.4.",
-    feedback: "Para φ = 0, Nc = 5,14 (valor clásico referenciado en la Norma, Art. 20.4). Nq y Nγ dependen del ángulo de fricción del suelo."
-  },
-  {
-    q: "La ROCA apta para apoyar cimentaciones debe presentar una alteración:",
-    options: [
-      "Menor al 10% del área de la cimentación",
-      "Menor al 25% del área de la cimentación",
-      "Menor al 50% del área de la cimentación",
-      "No hay límite"
-    ],
+    q: "Sobre la RESPONSABILIDAD POR APLICACIÓN de la Norma (Art. 10):",
+    options: ["Las entidades encargadas de otorgar la ejecución y la Licencia de Edificación son responsables de hacer cumplir la Norma; no autorizan la ejecución si no hay EMS o ITS", "La responsabilidad recae exclusivamente en el constructor", "Las entidades pueden exigir al PR ensayos adicionales a los indicados en la Norma", "El Colegio de Ingenieros es la única entidad responsable"],
     correct: 0,
-    hint: "Definición 5.59.",
-    feedback: "La roca apta para apoyo de cimentaciones debe presentar una alteración menor al 10% del área de la cimentación; las rocas blandas o disgregables con herramientas manuales se tratan como suelo (definición 5.59)."
+    hint: "Entidades otorgantes de licencia + no exigir trabajos adicionales a los de la Norma.",
+    feedback: "Art. 10: las entidades encargadas de otorgar la ejecución y la Licencia de Edificación son responsables de hacer cumplir la Norma; no autorizan la ejecución si no hay EMS/ITS. Tampoco pueden exigir al PR o al PRS trabajos o ensayos no indicados en la Norma."
   },
   {
-    q: "Una Cimentación Anular Continua se caracteriza porque su PERÍMETRO MEDIO P cumple:",
-    options: [
-      "P ≤ B",
-      "P = 2B",
-      "P ≥ 10B",
-      "P = π·B"
-    ],
-    correct: 2,
-    hint: "Es 'continua' en forma anular.",
-    feedback: "Cimentación anular continua: perímetro medio P ≥ 10·B, siendo B el ancho (definición 5.21)."
-  },
-  {
-    q: "Para estimar asentamientos en grupos de pilotes en SUELO COHESIVO se puede reemplazar el grupo por una zapata imaginaria ubicada a:",
-    options: [
-      "1/3 de la profundidad del grupo",
-      "2/3 de la profundidad del grupo de pilotes",
-      "Toda la profundidad del grupo",
-      "La punta del pilote"
-    ],
+    q: "La INTERPRETACIÓN de la Norma E.050 (Art. 11) corresponde a:",
+    options: ["El Ministerio de Vivienda únicamente", "El Ingeniero Civil, colegiado y habilitado, cuando interviene como cualquier actor en los procesos de edificación, conforme a la NTE G.030", "Cualquier profesional de la construcción", "El solicitante del EMS"],
     correct: 1,
-    hint: "Numeral 32.3.5 d).",
-    feedback: "En pilotes en suelo cohesivo, para estimar el asentamiento del grupo se reemplaza por una zapata imaginaria ubicada a 2/3 de la profundidad del grupo, con dimensiones iguales a la sección del grupo (numeral 32.3.5 d)."
+    hint: "Ingeniero Civil colegiado + remite a G.030.",
+    feedback: "Art. 11: corresponde al Ingeniero Civil, colegiado y habilitado, la aplicación, cumplimiento e interpretación de la Norma, conforme a la NTE G.030 Derechos y Responsabilidades."
   },
   {
-    q: "Según Tabla 11, un suelo expansivo con IP > 32 y % finos < 2μm > 37 tiene potencial de expansión:",
-    options: ["Bajo", "Medio", "Alto", "Muy alto"],
-    correct: 3,
-    hint: "Los valores máximos corresponden al grado máximo.",
-    feedback: "Tabla 11: Muy alto → Ep > 30%, IP > 32, % < 2μm > 37. Se clasifica en los cuatro niveles: Muy alto, Alto, Medio y Bajo (Art. 37)."
+    q: "Entre las OBLIGACIONES DEL SOLICITANTE (Art. 12) se encuentran:",
+    options: ["Firmar el EMS junto con el PR", "Proporcionar la información indicada en el Art. 13 y garantizar el libre acceso al terreno para efectuar la exploración de campo", "Realizar los ensayos de laboratorio", "Aprobar los resultados del EMS ante la municipalidad"],
+    correct: 1,
+    hint: "Información + libre acceso.",
+    feedback: "Art. 12: el solicitante debe proporcionar la información indicada en el Art. 13 y garantizar el libre acceso al terreno para efectuar la exploración de campo."
   }
 ];
 
